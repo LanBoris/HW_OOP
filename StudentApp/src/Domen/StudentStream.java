@@ -31,7 +31,7 @@ public class StudentStream implements Iterable<StudentGroup>{
     
     @Override
     public String toString() {
-        return "StudentStream [stream=" + stream + ", idStream=" + idStream + "]";
+        return "StudentStream № " + idStream + ", amount of groups = " + stream.size() +  "\n" + stream;
     }
 
     @Override
