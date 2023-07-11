@@ -25,6 +25,8 @@ public class App {
         Student s8 = new Student("Boris", 23, 775);
         Student s9 = new Student("Sasha", 25, 554);
         Student s10 = new Student("Kate", 25, 784);
+        Student s11 = new Student("Masha", 22, 231);
+        Student s12 = new Student("Nikolai", 22, 342);
         
         List<Student> listStud = new ArrayList<Student>();
         listStud.add(s2);
@@ -41,6 +43,8 @@ public class App {
         listStud2.add(s3);
         listStud2.add(s6);
         listStud2.add(s7);
+        listStud2.add(s11);
+        listStud2.add(s12);
 
         StudentGroup group4580 = new StudentGroup(listStud, 4580);
         System.out.println("\n" + "Group № 4580: ");
