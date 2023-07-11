@@ -12,15 +12,12 @@ public class Student extends Person implements Comparable<Student> {
     // private int age;
     // private String name;
 
-    
-    
-
     // public int getAge() {
-    //     return age;
+    // return age;
     // }
 
     // public String getName() {
-    //     return name;
+    // return name;
     // }
 
     public int getId() {
@@ -28,11 +25,11 @@ public class Student extends Person implements Comparable<Student> {
     }
 
     // public void setAge(int age) {
-    //     this.age = age;
+    // this.age = age;
     // }
 
     // public void setName(String name) {
-    //     this.name = name;
+    // this.name = name;
     // }
 
     public void setId(int id) {
@@ -47,24 +44,21 @@ public class Student extends Person implements Comparable<Student> {
     @Override
     public int compareTo(Student o) {
 
-        System.out.println(super.getName()+" - "+o.getName());
-        if(super.getAge()==o.getAge())
-        {
-            if(id==o.id)return 0 ;
-            if(id>o.id)return 1;
-            else return -1;
-            //return 0;
+        System.out.println(super.getName() + " - " + o.getName());
+        if (super.getAge() == o.getAge()) {
+            if (id == o.id)
+                return 0;
+            if (id > o.id)
+                return 1;
+            else
+                return -1;
+            // return 0;
         }
 
-        if(super.getAge()>o.getAge())
-        return 1;
+        if (super.getAge() > o.getAge())
+            return 1;
         else
-        return -1;        
+            return -1;
     }
 
-
-    
-    
-    
 }
-

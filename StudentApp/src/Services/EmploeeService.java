@@ -5,14 +5,23 @@ import java.util.List;
 
 import Domen.Emploee;
 
-public class EmploeeService {
+public class EmploeeService implements iPersonService<Emploee> {
     private int count;
     private List<Emploee> emploees;
 
-    public EmploeeService(){
+    public EmploeeService() {
         this.emploees = new ArrayList<Emploee>();
     }
 
-    public void create(String name, int age) {
+    @Override
+    public List<Emploee> getAll() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getAll'");
     }
+
+    @Override
+    public void create(String name, int age) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'create'");
+    }    
 }

@@ -5,6 +5,7 @@ import java.util.List;
 
 import Controllers.EmploeeController;
 import Domen.Emploee;
+import Domen.GroupComparator;
 import Domen.Person;
 import Domen.PersonComparator;
 import Domen.Student;
@@ -47,37 +48,29 @@ public class App {
         listStud2.add(s12);
 
         StudentGroup group4580 = new StudentGroup(listStud, 4580);
-        System.out.println("\n" + "Group № 4580: ");
-        for(Student std : group4580)
-        {
-            System.out.println(std);
-        }
 
         StudentGroup group4660 = new StudentGroup(listStud1, 4660);
-        System.out.println("\n" + "Group № 4660:");
-        for(Student std : group4660)
-        {
-            System.out.println(std);
-        }
 
         StudentGroup group3445 = new StudentGroup(listStud2, 3445);
-        System.out.println("\n" + "Group № 3445: ");
-        for(Student std : group3445)
-        {
-            System.out.println(std);
-        }
 
         List<StudentGroup> listStream = new ArrayList<>();
         listStream.add(group4580);
         listStream.add(group3445);
         listStream.add(group4660);
         StudentStream stream1 = new StudentStream(listStream, 1);
-        System.out.println("\n" + "Student Stream 1: ");
+        System.out.println("\n" + "Students Stream 1: ");
         for(StudentGroup grp: stream1){
             System.out.println("\n" + "Group № " + grp.getIdGroup());
             for(Student std: grp){
                 System.out.println(std);
             }
+        }
+
+        GroupComparator<StudentGroup> comGroup = new GroupComparator<>();
+        Collections.sort(stream1.getStream(), comGroup);
+        System.out.println("\n" + "Groups sorted by amount of students: ");
+        for(StudentGroup grp: stream1){
+            System.out.println("Group № " + grp.getIdGroup());
         }
 
         // PersonComparator<Student> comStud = new PersonComparator<>();
