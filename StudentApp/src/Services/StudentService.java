@@ -7,9 +7,11 @@ import Domen.PersonComparator;
 import Domen.Student;
 
 public class StudentService implements iPersonService<Student> {
+    // Поля класса
     private int count;
     private List<Student> students;
 
+    // Конструктор
     public StudentService(){
         this.students = new ArrayList<Student>();
     }
@@ -19,7 +21,6 @@ public class StudentService implements iPersonService<Student> {
         return students;
     }
 
-    // Разобраться с написанием по образцу с гита
     @Override
     public void create(String name, int age){
         Student per = new Student(name, age, count);
